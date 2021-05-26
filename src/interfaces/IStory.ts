@@ -16,3 +16,4 @@ export interface IStory {
   bookmark?: boolean;
   free?: boolean;
   date?: Date;
+}

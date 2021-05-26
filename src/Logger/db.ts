@@ -4,6 +4,7 @@ import config from "../config";
 const connectDB = async () => {
   try {
     await mongoose.connect(config.mongoURI, {
+      // dbName: 'follin',
       useNewUrlParser: true,
       useCreateIndex: true,
       useUnifiedTopology: true,

@@ -1,12 +1,10 @@
 import mongoose from "mongoose";
 //엑스포트가 여러개인 것만 묶을 수 있대, 그래서 몽구스는 안돼
 import { ISeminar } from "../interfaces/ISeminar";
-import { ILineupSeminar } from "../interfaces/ILineupSeminar";
 
 const SeminarSchema = new mongoose.Schema({
-  user: {
+  id: {
     type: mongoose.Types.ObjectId,
-    ref: "User",
   },
   main_image: {
     type: String,
@@ -35,6 +33,12 @@ const SeminarSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now,
+  },
+  follin:{
+    type:Boolean,
+  },
+  main:{
+    type:Boolean,
   },
 });
 
