@@ -7,9 +7,9 @@ connectDB();
 
 app.use(express.json()); // [3]
 
-// Define Routes
-//app.use("/api/users", require("./api/users")); // [4]
-app.use("/seminar",require("./api/seminar"));
+// Define Routes 
+app.use("/story",require("./api/story"));
+app.use("/seminar",require("./api/seminar"));   // [4]
 
 // error handler
 app.use(function (err, req, res, next) {

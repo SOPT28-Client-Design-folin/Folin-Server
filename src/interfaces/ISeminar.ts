@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 export interface ISeminar {
-  id: mongoose.Types.ObjectId;
   main_image: string;
   sub_image: string;
   title: string;

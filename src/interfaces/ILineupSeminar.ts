@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 export interface ILineupSeminar {
-  id: mongoose.Types.ObjectId;
   image: string;
   title: string;
   alarm: boolean;
@@ -9,5 +8,5 @@ export interface ILineupSeminar {
   price: number;
   place: string;
   people: number;
-  date?: Date;
+  date: string;
 }

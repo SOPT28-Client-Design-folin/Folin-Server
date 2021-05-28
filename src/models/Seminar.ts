@@ -21,8 +21,8 @@ const SeminarSchema = new mongoose.Schema({
   job: {
     type: String,
   },
-  state: {
-    type: String,
+  state: { //신청유무 
+    type: Boolean,
   },
   price: {
     type: Number,
@@ -31,8 +31,7 @@ const SeminarSchema = new mongoose.Schema({
     type: Number,
   },
   date: {
-    type: Date,
-    default: Date.now,
+    type: String,
   },
   follin:{
     type:Boolean,
