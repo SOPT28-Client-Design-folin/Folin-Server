@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import { IKeyword } from "./IKeyword";
 import { ICategory } from "./ICategory";
 
-export interface IStory {
-  user: mongoose.Types.ObjectId;
+interface IStory {
   title: string;
   keyword: [IKeyword];
   author: string;
@@ -16,3 +15,6 @@ export interface IStory {
   bookmark?: boolean;
   free?: boolean;
   date?: Date;
+};
+
+export { IStory };

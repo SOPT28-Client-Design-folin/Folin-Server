@@ -36,7 +36,7 @@ const SeminarSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-});
+  });
 
 export default mongoose.model<ISeminar & mongoose.Document>(
   "Seminar", 

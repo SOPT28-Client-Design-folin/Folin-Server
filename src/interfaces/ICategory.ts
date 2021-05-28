@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
+// 안쓸거!
 
 export interface ICategory {
-  user: mongoose.Types.ObjectId;
   buiseness?: boolean;
   space?: boolean;
   lifestyle?: boolean;

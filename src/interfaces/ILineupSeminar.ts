@@ -1,7 +1,4 @@
-import mongoose from "mongoose";
-
 export interface ILineupSeminar {
-  user: mongoose.Types.ObjectId;
   image: string;
   title: string;
   alarm: boolean;
