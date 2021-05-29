@@ -1,14 +1,11 @@
 import mongoose from "mongoose";
-import { IKeyword } from "./IKeyword";
-import { ICategory } from "./ICategory";
 
 export interface IStory {
-  user: mongoose.Types.ObjectId;
   title: string;
-  keyword: [IKeyword];
+  keyword: string; 
   author: string;
   content: string;
-  category: [ICategory];
+  category: string;  //Number인가요 ? 
   main_image?: string;
   rect_image?: string;
   sub_image?: string;
@@ -16,3 +13,4 @@ export interface IStory {
   bookmark?: boolean;
   free?: boolean;
   date?: Date;
+}

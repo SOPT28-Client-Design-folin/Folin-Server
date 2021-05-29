@@ -1,4 +1,3 @@
-//import {testMakePerson} from './utils/makePerson';
 import express from "express"; // [1]
 const app = express(); // [2]
 import connectDB from "./Logger/db";
@@ -8,8 +7,9 @@ connectDB();
 
 app.use(express.json()); // [3]
 
-// Define Routes
-//app.use("/api/users", require("./api/users")); // [4]
+// Define Routes 
+app.use("/story",require("./api/story"));
+app.use("/seminar",require("./api/seminar"));   // [4]
 
 // error handler
 app.use(function (err, req, res, next) {

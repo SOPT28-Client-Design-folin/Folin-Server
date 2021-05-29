@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 import { ILineupSeminar } from "../interfaces/ILineupSeminar";
 
 const LineupSeminarSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Types.ObjectId,
-    ref: "User",
-  },
   image: {
     type: String,
   },
@@ -24,9 +20,11 @@ const LineupSeminarSchema = new mongoose.Schema({
   place: {
     type: String,
   },
+  people: {
+    type: Number,
+  },
   date: {
-    type: Date,
-    default: Date.now,
+    type: String,
   },
 });
 
