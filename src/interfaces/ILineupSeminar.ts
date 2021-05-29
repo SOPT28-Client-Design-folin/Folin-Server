@@ -5,5 +5,6 @@ export interface ILineupSeminar {
   seminar_date: string;
   price: number;
   place: string;
-  date?: Date;
+  people: number;
+  date: string;
 }
