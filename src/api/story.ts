@@ -3,6 +3,12 @@ import mongoose from "mongoose";
 import Story from "../models/Story";
 const router = express.Router();
 
+/**
+ *  @route Post api/story
+ *  @desc Register story
+ *  @access Public
+ */
+
 router.get('/story', async (req, res) => {
   try {
     const main = await Story.findOne();
@@ -12,7 +18,7 @@ router.get('/story', async (req, res) => {
     const result = { main, best, thema, popular };
   return res.status(200).json({ status: 200, message: "메인화면 조회 성공 ^_^", data: result });
   } catch(error) {
-    return res.status(500).json({ sattus: 500, message: "메인화면 조회 실패 ㅠㅅㅠ" });
+    return res.status(500).json({ status: 500, message: "메인화면 조회 실패 ㅠㅅㅠ" });
   }
 }); 
 

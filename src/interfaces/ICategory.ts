@@ -1,3 +1,4 @@
+/*
 export interface ICategory {
   buiseness?: boolean;
   space?: boolean;
@@ -8,6 +9,7 @@ export interface ICategory {
   carrer?: boolean;
   O_culture?: boolean;
 }
+*/
 
 // IKeyword였던 것..(추억용)
 /*

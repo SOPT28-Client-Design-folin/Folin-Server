@@ -11,3 +11,17 @@ export interface ISeminar {
   follin: boolean;
   main: boolean;
 }
+
+export interface ISeminarDTO {
+  main_image: string;
+  sub_image: string;
+  title: string;
+  author: string;
+  job: string;
+  state: boolean;
+  price: number;
+  sale_price: number;
+  date?: Date;
+  follin: boolean;
+  main: boolean;
+}

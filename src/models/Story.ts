@@ -1,12 +1,7 @@
 import mongoose from "mongoose";
 import { IStory } from "../interfaces/IStory";
-import { IKeyword } from "../interfaces/IKeyword";
 
 const StorySchema = new mongoose.Schema({
-  user: {
-    type: mongoose.SchemaTypes.ObjectId,
-    ref: "User",
-  },
   title: {
     type: String,
     required: true,
@@ -50,7 +45,8 @@ const StorySchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model<IntersectionObserverEntry & mongoose.Document>(
+export default mongoose.model<IStory & mongoose.Document>(
   "Story", 
   StorySchema
 );
+
