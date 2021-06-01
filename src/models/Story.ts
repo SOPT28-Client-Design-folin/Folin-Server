@@ -17,10 +17,18 @@ const StorySchema = new mongoose.Schema({
   content: {
     type: String,
   },
-  category: {
-    type: String,
-    required: true,
-  },
+  category: [
+    {
+      category1: {
+        type: String,
+        required: true,
+      },
+      category2: {
+        type: String,
+        required: true,
+      },
+    }
+  ],
   main_image: {
     type: String,
   },
@@ -40,8 +48,8 @@ const StorySchema = new mongoose.Schema({
     type: Boolean,
   },
   date: {
-    type: Date,
-    default: Date.now,
+    type: String,
+    required: true,
   },
 });
 

@@ -11,6 +11,7 @@ const router = express.Router();
 
 router.get('/story', async (req, res) => {
   try {
+    //console.log('hi');
     const main = await Story.findOne();
     const best = await Story.find().limit(4);
     const thema = await Story.find().limit(6);

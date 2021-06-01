@@ -35,4 +35,3 @@ app // [5]
     process.exit(1);
   });
   
-//testMakePerson();

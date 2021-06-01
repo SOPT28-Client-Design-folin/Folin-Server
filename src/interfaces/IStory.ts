@@ -35,6 +35,6 @@ export interface IStoryDTO {
   heart?: boolean;
   bookmark?: boolean;
   free?: boolean;
-  date?: Date;
+  date?: string;
 };
 
