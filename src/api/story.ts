@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import Story from "../models/Story";
-import ThemaTitle from "../models/ThemaTitle";
+// import ThemaTitle from "../models/ThemaTitle";
 const router = express.Router();
 
 /**
@@ -10,7 +10,7 @@ const router = express.Router();
  *  @access Public
  */
 
-router.get('/story', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const main = await Story.findOne({key:1});
     const best = await Story.find({key:2}).limit(4);

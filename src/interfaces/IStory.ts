@@ -1,6 +1,5 @@
 export interface IStory {
   title: string;
-  keyword: string;
   author: string;
   content: string;
   category: [
@@ -22,7 +21,6 @@ export interface IStory {
 
 export interface IStoryDTO {
   title: string;
-  keyword: string;
   author: string;
   content: string;
   category: [
