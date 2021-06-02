@@ -27,9 +27,8 @@ const SeminarSchema = new mongoose.Schema({
   sale_price: {
     type: Number,
   },
-  date?: {
-    type: Date,
-    default: Date.now,
+  date: {
+    type: String,
   },
   follin: {
     type: Boolean

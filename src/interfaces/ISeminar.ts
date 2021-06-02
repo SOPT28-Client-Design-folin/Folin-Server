@@ -7,7 +7,7 @@ export interface ISeminar {
   state: boolean;
   price: number;
   sale_price: number;
-  date?: Date;
+  date: string;
   follin: boolean;
   main: boolean;
 }
@@ -21,7 +21,7 @@ export interface ISeminarDTO {
   state: boolean;
   price: number;
   sale_price: number;
-  date?: Date;
+  date: string;
   follin: boolean;
   main: boolean;
 }

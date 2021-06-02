@@ -1,6 +1,6 @@
 export interface IStory {
   title: string;
-  keyword: string; //배열에서 string으로 변경합니다!
+  keyword: string;
   author: string;
   content: string;
   category: [
@@ -8,14 +8,15 @@ export interface IStory {
       category1: string;
       category2: string;
     }
-  ] 
+  ]  
+  thema_title? :number;
   main_image?: string;
   rect_image?: string;
   sub_image?: string;
   heart?: boolean;
   bookmark?: boolean;
   free?: boolean;
-  date?: Date;
+  date?: string;
 }
 
 export interface IStoryDTO {
@@ -29,6 +30,7 @@ export interface IStoryDTO {
       category2: string;
     }
   ]  
+  thema_title? :number;
   main_image?: string;
   rect_image?: string;
   sub_image?: string;

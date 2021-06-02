@@ -6,10 +6,6 @@ const StorySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  keyword: {
-    type: String,
-    required: true,
-  },
   author: {
     type: String,
     required: true,
@@ -29,6 +25,9 @@ const StorySchema = new mongoose.Schema({
       },
     }
   ],
+  thema_title: {
+    type: Number,
+  },
   main_image: {
     type: String,
   },
