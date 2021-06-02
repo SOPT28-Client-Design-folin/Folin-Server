@@ -1,14 +1,8 @@
 export interface IStory {
   title: string;
-  keyword: string;
   author: string;
   content: string;
-  category: [
-    {
-      category1: string;
-      category2: string;
-    }
-  ]  
+  category: [string];
   thema_title? :number;
   main_image?: string;
   rect_image?: string;
@@ -21,15 +15,9 @@ export interface IStory {
 
 export interface IStoryDTO {
   title: string;
-  keyword: string;
   author: string;
   content: string;
-  category: [
-    {
-      category1: string;
-      category2: string;
-    }
-  ]  
+  category: [string]; 
   thema_title? :number;
   main_image?: string;
   rect_image?: string;
