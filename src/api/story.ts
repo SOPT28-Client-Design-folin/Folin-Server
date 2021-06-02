@@ -12,12 +12,12 @@ const router = express.Router();
 
 router.get('/story', async (req, res) => {
   try {
-    //console.log('hi');
-    const main = await Story.findOne();
-    const best = await Story.find().limit(4);
+    const main = await Story.findOne({key:1});
+    const best = await Story.find({key:2}).limit(4);
+    //const best2 = await Story.find(}, {_id:0, :0})
     const themaTitle = await ThemaTitle.find();
-    const thema = await Story.find().limit(6);
-    const popular = await Story.find().limit(10);
+    const thema = await Story.find({key:3}).limit(6);
+    const popular = await Story.find({key:4}).limit(10);
     const result = { main, best, themaTitle, thema, popular };
   return res.status(200).json({ status: 200, message: "메인화면 조회 성공 ^_^", data: result });
   } catch(error) {

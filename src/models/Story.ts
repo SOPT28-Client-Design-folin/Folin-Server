@@ -23,6 +23,9 @@ const StorySchema = new mongoose.Schema({
       },
     }
   ],
+  key: {
+    type: Number,
+  },
   thema_title: {
     type: Number,
   },

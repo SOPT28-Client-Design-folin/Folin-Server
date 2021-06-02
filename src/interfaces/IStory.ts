@@ -9,6 +9,7 @@ export interface IStory {
       category2: string;
     }
   ]  
+  key : number;
   thema_title? :number;
   main_image?: string;
   rect_image?: string;
@@ -30,6 +31,7 @@ export interface IStoryDTO {
       category2: string;
     }
   ]  
+  key : number;
   thema_title? :number;
   main_image?: string;
   rect_image?: string;
