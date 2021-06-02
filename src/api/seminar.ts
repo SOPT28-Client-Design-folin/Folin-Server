@@ -6,12 +6,11 @@ const router = express.Router();
 
 router.get('/seminar', async (req, res) => {
   try {
-    /*
+
     const main = await Seminar.findOne();
     const folin_semiar = await Seminar.find().limit(8);
     const lineup = await LineupSeminar.findOne();
-    const result = { main, folin_semiar, lineup };*/
-    const result = '3';
+    const result = { main, folin_semiar, lineup };
 
     if (!result) {
       res.status(400).json({

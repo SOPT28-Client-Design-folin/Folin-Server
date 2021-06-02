@@ -18,8 +18,8 @@ const SeminarSchema = new mongoose.Schema({
   job: {
     type: String,
   },
-  state: {
-    type: String,
+  state: { //신청유무 
+    type: Boolean,
   },
   price: {
     type: Number,

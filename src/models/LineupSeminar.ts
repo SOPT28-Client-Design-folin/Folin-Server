@@ -20,6 +20,9 @@ const LineupSeminarSchema = new mongoose.Schema({
   place: {
     type: String,
   },
+  people: {
+    type: Number,
+  },
   date: {
     type: String,
   },

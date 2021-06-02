@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import Story from "../models/Story";
+import ThemaTitle from "../models/ThemaTitle";
 const router = express.Router();
 
 /**
@@ -14,7 +15,7 @@ router.get('/story', async (req, res) => {
     //console.log('hi');
     const main = await Story.findOne();
     const best = await Story.find().limit(4);
-    const themaTitle = await Story.find().limit(6);
+    const themaTitle = await ThemaTitle.find();
     const thema = await Story.find().limit(6);
     const popular = await Story.find().limit(10);
     const result = { main, best, themaTitle, thema, popular };
