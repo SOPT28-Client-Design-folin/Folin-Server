@@ -4,13 +4,20 @@ import Seminar from "../models/Seminar";
 import LineupSeminar from "../models/LineupSeminar";
 const router = express.Router();
 
-router.get('/seminar', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
 
-    const main = await Seminar.findOne();
-    const folin_semiar = await Seminar.find().limit(8);
-    const lineup = await LineupSeminar.findOne();
-    const result = { main, folin_semiar, lineup };
+    const main = await Seminar.find()
+    .select("main_image")
+    .where('main').equals(true);
+
+    const folin_seminar = await Seminar.find()
+    .select('title sub_image author job state price sale_price')
+    .where('follin').equals(true);
+
+    const lineup = await LineupSeminar.find().select('-title -__v');
+
+    const result = { main, folin_seminar, lineup };
 
     if (!result) {
       res.status(400).json({
