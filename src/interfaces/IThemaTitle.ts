@@ -1,3 +1,3 @@
-export interface ISeminar {
+export interface IThemaTitle {
   title: string;
 }
