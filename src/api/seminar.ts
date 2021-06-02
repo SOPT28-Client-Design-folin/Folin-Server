@@ -1,44 +1,27 @@
 import express from "express";
+import mongoose from "mongoose";
 import Seminar from "../models/Seminar";
 import LineupSeminar from "../models/LineupSeminar";
-
-import config from "../config";
-
 const router = express.Router();
 
-router.get('/', async(req,res) => {
-    try{
-        const main = await Seminar.find()
-        .select("main_image")
-        .where('main').equals(true);
+router.get('/seminar', async (req, res) => {
+  try {
 
-        const follin = await Seminar.find()
-        .select('title sub_image author job state price sale_price')
-        .where('follin').equals(true);
+    const main = await Seminar.findOne();
+    const folin_semiar = await Seminar.find().limit(8);
+    const lineup = await LineupSeminar.findOne();
+    const result = { main, folin_semiar, lineup };
 
-        const lineup = await LineupSeminar.find().select('-title -__v');
+    if (!result) {
+      res.status(400).json({
+          msg: "값을 불러오지 못했습니다.",
+      });
+  }
 
-        const data = {main, follin, lineup};
-
-        return res.status(200).json({
-            status: "200",
-            message: "조회 성공",
-            success: "true",
-            data:data,
-        })
-
-    }catch(error){
-        res.status(500).json({
-            status: "500",
-            message: "서버오류",
-            success: "false",
-        });
-    }
-})
+  return res.status(200).json({ status: 200, message: "메인화면 조회 성공 ^_^", data: result });
+  } catch(error) {
+    return res.status(500).json({ status: 500, message: "메인화면 조회 실패 ㅠㅅㅠ" });
+  }
+}); 
 
 module.exports = router;
-
-
-
-
-

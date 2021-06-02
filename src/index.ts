@@ -7,9 +7,9 @@ connectDB();
 
 app.use(express.json()); // [3]
 
-// Define Routes 
-app.use("/story",require("./api/story"));
-app.use("/seminar",require("./api/seminar"));   // [4]
+// Define Routes
+app.use("/api/story", require("./api/story")); 
+app.use("/api/seminar", require("./api/seminar")); // [4]
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -35,4 +35,3 @@ app // [5]
     process.exit(1);
   });
   
-//testMakePerson();

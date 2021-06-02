@@ -3,9 +3,6 @@ import mongoose from "mongoose";
 import { ISeminar } from "../interfaces/ISeminar";
 
 const SeminarSchema = new mongoose.Schema({
-  id: {
-    type: mongoose.Types.ObjectId,
-  },
   main_image: {
     type: String,
   },
@@ -33,11 +30,11 @@ const SeminarSchema = new mongoose.Schema({
   date: {
     type: String,
   },
-  follin:{
-    type:Boolean,
+  follin: {
+    type: Boolean
   },
-  main:{
-    type:Boolean,
+  main: {
+    type: Boolean
   },
 });
 
