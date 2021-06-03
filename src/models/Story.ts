@@ -11,18 +11,9 @@ const StorySchema = new mongoose.Schema({
   content: {
     type: String,
   },
-  category: [
-    {
-      category1: {
-        type: String,
-        required: true,
-      },
-      category2: {
-        type: String,
-        required: true,
-      },
-    }
-  ],
+  category: {
+    type: [String],
+  },
   key: {
     type: Number,
   },
